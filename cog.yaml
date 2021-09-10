@@ -1,0 +1,16 @@
+predict: "predict.py:Predictor"
+build:
+  system_packages:
+    - "cmake"
+    - "ffmpeg"
+    - "libfftw3-dev"
+    - "fftw3"
+  python_packages:
+      - "Cython==0.29.24"
+      - "mido==1.2.9"
+      - "scipy==1.7.1"
+      - "soundfile==0.10.2"
+      - "timbral_models==0.4.0"
+  python_version: "3.8"
+  run:
+    - "pip install madmom==0.16.1 ADTLib==2.1.2 essentia==2.1b5"
